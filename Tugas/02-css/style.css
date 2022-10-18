@@ -1,0 +1,29 @@
+.container{
+    background-color: #fff;
+    margin: 100px;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: rgba(0,0,0,0.8) 0 0 10px;
+    border-collapse: collapse;
+    position: relative;
+}
+
+.article {
+    border-bottom: 5px inset;
+}
+
+.container__bottom{
+    margin-top: 80px;
+    position: relative;
+}
+
+.tombol{
+    border-style: hidden;
+    background-color: blueviolet;
+    padding: 14px 28px;
+    width: 100%;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
