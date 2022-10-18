@@ -1,4 +1,8 @@
 /* tugas 1 beserta jawabannya */
+*{
+    text-decoration: none;
+}
+
 .container{
     background-color: #fff;
     margin: 100px;
