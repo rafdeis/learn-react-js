@@ -82,20 +82,20 @@
 
 //Soal 8
 
-// var nilaiDoe = 50;
-//     if(nilaiDoe >= 80 ) {
-//         console.log("Indeks nya A");
-//     } else if (nilaiDoe >= 70 && nilaiDoe < 80 ) {
-//         console.log("Indeks nya B");
-//     } else if (nilaiDoe >= 60 && nilaiDoe < 70 ) {
-//         console.log("Indeks nya C");
-//     } else if (nilaiDoe >= 50 && nilaiDoe < 60 ) {
-//         console.log("Indeks nya D");
-//     } else if (nilaiDoe < 50 ) {
-//         console.log("Indeks nya E");
-//     } else {
-//         console.log("None");
-//     }
+var nilaiDoe = 50;
+    if(nilaiDoe >= 80 ) {
+        console.log("Indeks nya A");
+    } else if (nilaiDoe >= 70 && nilaiDoe < 80 ) {
+        console.log("Indeks nya B");
+    } else if (nilaiDoe >= 60 && nilaiDoe < 70 ) {
+        console.log("Indeks nya C");
+    } else if (nilaiDoe >= 50 && nilaiDoe < 60 ) {
+        console.log("Indeks nya D");
+    } else if (nilaiDoe < 50 ) {
+        console.log("Indeks nya E");
+    } else {
+        console.log("None");
+    }
 
 
 
@@ -109,10 +109,10 @@
 
 //Soal 10
 
-var traffic_lights = "red";
-switch(traffic_lights) {
-    case "red": { console.log('Berhenti'); break; }
-    case "yellow": { console.log('Hati-hati'); break; }
-    case "green": { console.log('Berjalan'); break; }
-    default: { console.log('TrafficLight Rusak'); break; }
-}
+// var traffic_lights = "red";
+// switch(traffic_lights) {
+//     case "red": { console.log('Berhenti'); break; }
+//     case "yellow": { console.log('Hati-hati'); break; }
+//     case "green": { console.log('Berjalan'); break; }
+//     default: { console.log('TrafficLight Rusak'); break; }
+// }
