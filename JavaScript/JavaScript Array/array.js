@@ -59,6 +59,6 @@
 // var title = ["my", "first", "experience", "as", "programmer"] 
 // console.log(title.join(" ")) 
 
-//Digabung
+Digabung
 var biodata = "You:Are Beutiful" 
 console.log(biodata.split(":").join(" "))
