@@ -55,13 +55,13 @@
 
 //Soal 9
 
-// var sayuran=[]
-// sayuran.push('Kangkung',
-//     'Bayam',
-//     'Buncis',
-//     'Kubis',
-//     'Timun',
-//     ',Seledri',
-//     'Tauge')
+var sayuran=[]
+sayuran.push('Kangkung',
+    'Bayam',
+    'Buncis',
+    'Kubis',
+    'Timun',
+    ',Seledri',
+    'Tauge')
 
-// console.log(sayuran)
+console.log(sayuran)
