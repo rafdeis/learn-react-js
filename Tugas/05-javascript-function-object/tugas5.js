@@ -52,13 +52,13 @@ console.log(objDaftarPeserta)
 var buah = [
     { nama: "Nanas", warna: "Kuning",  adaBijinya: "tidak", harga: 9000 },
     { nama: "Jeruk", warna: "Oranye", adaBijinya: "ada", harga: 8000 },
-    { nama: "Semangka", warna: "Hijau & Merah", adaBijinya: "ada", harga: 10000 },
+    { nama: "Semangka", warna: "Hijau & Merah", adaBijinya: "tidak", harga: 10000 },
     { nama: "Pisang", warna: "Kuning", adaBijinya: "tidak", harga: 5000 }
 ]
 var filterBuah = buah.filter(function(result){
     return result.adaBijinya !== "ada"
 })
-console.log(buah)
+// console.log(buah)
 console.log(filterBuah)
 
 //Soal 7
