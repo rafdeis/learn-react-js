@@ -13,9 +13,12 @@ button{
     width: 100%;
     outline: #fff;
     height: 35px;
-    margin-bottom: 15px;
+    margin-bottom:auto;
 }
 
-p{
+.p1{
     text-align: center;
+}
+.p2{
+    margin-top: 10px;
 }

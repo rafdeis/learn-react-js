@@ -9,12 +9,15 @@ const Tugas9 = () => {
 
     return (
         <div className='card'>
-            <p> {count} </p>
+            <div className="p1">
+                <p>{count}</p>
+            </div>
             <button onClick={() => setCount(count + 1)}>
             Tambah
             </button>
-            
-            {count > 10 ? "State count sudah lebih dari 10": ""}
+            <div className="p2">
+                {count > 10 ? "State count sudah lebih dari 10": ""}
+            </div>
         </div>
 
     )
