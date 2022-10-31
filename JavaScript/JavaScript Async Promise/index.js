@@ -20,7 +20,7 @@ const myFunctionPromise = (param) => {
 let execute = async ()  => {
 
     try {
-    let result = await myFunctionPromise(5)
+    let result = await myFunctionPromise(2)
     console.log(result)
     } catch (error) {
         console.log(" Ini Catch = ", error)
