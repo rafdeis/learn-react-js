@@ -4,10 +4,54 @@ import axios from 'axios';
 
   const App = () => {
     const [data , setData] = useState(null)
+
+
+    //materi create data &  handle input
+    const [input, setInput] = useState(
+      {
+        name : ""
+      }
+    )
   
+     const [fetchStatus, setFetchStatus] = useState(true) 
+      
+    const handleInput = (event) => {
+
+      let name = event.target.name
+      let value = event.target.value
+
+      if(name === "name"){
+        setInput( { ...input, name : value} )
+     }
+
+
+    }
+
+
+    const handleSubmit = (event) => {
+      event.preventDefault()
+
+      let {
+        name
+      } = input
+
+      axios.post('https://backendexample.sanbercloud.com/api/contestants', {name})
+      .then((res) => {
+        console.log(res)
+        setFetchStatus(true)
+      })
+
+      setInput(
+        {
+          name : ""
+        }
+      )
+
+    }
 
   useEffect ( () => {
 
+   if (fetchStatus ===  true ){
     axios.get('https://backendexample.sanbercloud.com/api/contestants')
     .then( (res) => {
       let  data = res.data
@@ -35,10 +79,13 @@ import axios from 'axios';
     .catch( (err) => {
 
     })
+    setFetchStatus(false)
+   }
 
-  } , [] )
+  } , [fetchStatus, setFetchStatus] )
 
   console.log(data)
+
 
   return (
     <>
@@ -54,10 +101,8 @@ import axios from 'axios';
           })}
 
         </ul>
-        <br/>
-        <br/>
-        <br/>
-        <table>
+
+        {/* <table>
           <tr>
             <th>No</th>
             <th>Nama</th>
@@ -71,8 +116,17 @@ import axios from 'axios';
               </tr>
             )
           })}
-        </table>
+        </table> */}
       </div>
+      <p>FORM DATA</p>
+
+      <form onSubmit={handleSubmit}>
+        <span>Nama :</span>
+        <input onChange={handleInput} value={input.name} name='name' />
+
+        <input type={'submit'}/>
+      </form>
+
     </>
   );
 
