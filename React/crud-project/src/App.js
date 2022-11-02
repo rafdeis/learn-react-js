@@ -14,6 +14,7 @@ import axios from 'axios';
     )
   
      const [fetchStatus, setFetchStatus] = useState(true) 
+     const [currentId, setCurrentId] = useState(-1) 
       
     const handleInput = (event) => {
 
@@ -35,17 +36,29 @@ import axios from 'axios';
         name
       } = input
 
-      axios.post('https://backendexample.sanbercloud.com/api/contestants', {name})
+      if(currentId === -1){
+        axios.post('https://backendexample.sanbercloud.com/api/contestants', {name})
       .then((res) => {
         console.log(res)
         setFetchStatus(true)
       })
+     }else{
+      //update data
+      axios.put(`https://backendexample.sanbercloud.com/api/contestants/${currentId}`, {name})
+      .then((res)=> {
+        setFetchStatus(true)
+      })
+     }
+
+     setCurrentId(-1)
 
       setInput(
         {
           name : ""
         }
       )
+
+
 
     }
 
@@ -84,8 +97,38 @@ import axios from 'axios';
 
   } , [fetchStatus, setFetchStatus] )
 
-  console.log(data)
 
+
+  const handleDelete = (event) => {
+    let idData = parseInt(event.target.value)
+    // console.log(idData)
+
+    axios.delete(`https://backendexample.sanbercloud.com/api/contestants/${idData}`)
+    .then( (res) => {
+      setFetchStatus(true)
+    })
+  }
+
+  const handleEdit = (event) => {
+    let idData = parseInt(event.target.value)
+    console.log(idData)
+
+    setCurrentId(idData)
+
+    axios.get(`https://backendexample.sanbercloud.com/api/contestants/${idData}`)
+    .then( (res) => {
+      
+
+      let data = res.data
+      console.log(data)
+
+      setInput(
+        {
+          name : data.name
+        }
+      )
+    })
+  } 
 
   return (
     <>
@@ -95,7 +138,10 @@ import axios from 'axios';
           { data !== null && data.map((res) => {
             return (
               <>
-                <li>  {res.name} </li>
+                <li>  {res.name} | &nbsp;
+                  <button onClick={handleEdit} value={res.id}>Edit</button>
+                  <button onClick={handleDelete} value={res.id}>Delete</button>
+                 </li>
               </>
             )
           })}
@@ -121,7 +167,7 @@ import axios from 'axios';
       <p>FORM DATA</p>
 
       <form onSubmit={handleSubmit}>
-        <span>Nama :</span>
+        <span>Nama :</span> 
         <input onChange={handleInput} value={input.name} name='name' />
 
         <input type={'submit'}/>
