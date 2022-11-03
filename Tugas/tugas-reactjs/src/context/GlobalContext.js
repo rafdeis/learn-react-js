@@ -132,8 +132,6 @@ export const GlobalProvider = (props) => {
               handleFunction
             }
         }>
-
-
             {props.children}
         </GlobalContext.Provider>
     )
