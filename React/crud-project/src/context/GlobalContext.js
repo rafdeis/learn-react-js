@@ -1,11 +1,13 @@
 import { createContext, useState } from "react";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 
 
 export const GlobalContext = createContext()
 
 export const GlobalProvider = (props) => {
+
+    let navigate = useNavigate()
 
     const [data , setData] = useState(null)
     const [input, setInput] = useState(
@@ -37,12 +39,14 @@ export const GlobalProvider = (props) => {
         .then((res) => {
           console.log(res)
           setFetchStatus(true)
+          navigate('/code-materi')
         })
        }else{
         //update data
         axios.put(`https://backendexample.sanbercloud.com/api/contestants/${currentId}`, {name})
         .then((res)=> {
           setFetchStatus(true)
+          navigate('/code-materi')
         })
        }
        setCurrentId(-1)
@@ -68,19 +72,7 @@ export const GlobalProvider = (props) => {
         console.log(idData)
     
         setCurrentId(idData)
-    
-        axios.get(`https://backendexample.sanbercloud.com/api/contestants/${idData}`)
-        .then( (res) => {
-          
-    
-          let data = res.data
-    
-          setInput(
-            {
-              name : data.name
-            }
-          )
-        })
+        navigate(`/edit/${idData}`)
       } 
 
       let fetchData = () => {

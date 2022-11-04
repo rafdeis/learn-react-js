@@ -1,9 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
-import { GlobalContext } from '../context/GlobalContext';
+import { GlobalContext } from './context/GlobalContext';
+import { useParams } from 'react-router-dom';
 
-  const CodeMateri = () => {
+  const CodeMateriForm = () => {
+
+    let { IdData } = useParams()
 
     const { state, handleFunction } = useContext(GlobalContext)
     const {
@@ -25,26 +28,23 @@ import { GlobalContext } from '../context/GlobalContext';
 
   useEffect ( () => {
 
-   if (fetchStatus ===  true ){
-        fetchData()
-   }
-  } , [fetchStatus, setFetchStatus] )
+    if (IdData !== undefined) {
+                axios.get(`https://backendexample.sanbercloud.com/api/contestants/${IdData}`)
+        .then( (res) => {
+          
+    
+          let data = res.data
+    
+          setInput(
+            {
+              name : data.name
+            }
+          )
+        })
+    }
+  } , [] )
   return (
     <>
-      <div>
-        <ul>
-            { data !== null && data.map((res, index) => {
-            return (
-                <li key={index}>  
-                    {res.name} | &nbsp;
-                    <button onClick={handleEdit} value={res.id}>Edit</button>
-                    <button onClick={handleDelete} value={res.id}>Delete</button>
-                 </li>
-            )
-          })}
-
-        </ul>
-      </div>
       <p>FORM DATA</p>
       <form onSubmit={handleSubmit}>
         <span>Nama :</span> 
@@ -57,5 +57,5 @@ import { GlobalContext } from '../context/GlobalContext';
   )
 }
 
-export default CodeMateri;
+export default CodeMateriForm;
   
