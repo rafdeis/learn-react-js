@@ -33,14 +33,14 @@ const Tugas15List = () => {
     return (
         <>
         <div className="w-1/2 mx-auto mt-10">
-        <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
-            <Link to={'/create'}>
+        <Link to={'/create'}>
             <button 
             type="button" 
             className="focus:outline-none text-white bg-purple-500 hover:bg-purple-600 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
             Create Data
             </button>
             </Link>
+        <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs bg-purple-500 text-white">
             <tr>
