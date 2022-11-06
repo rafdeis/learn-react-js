@@ -193,10 +193,10 @@ export const GlobalProvider = (props) => {
 	        return 'Rp. '+rupiah.split('',rupiah.length-1).reverse().join('');
     }
     function handleText(str, num) {
-        if (str.length <= num) {
+        if (str != null &&  str.length <= num) {
           return str
         }
-        return str.slice(0, num) + '...'
+        return str.slice(num, 15) + '...'
       }
 
 

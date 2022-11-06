@@ -19,7 +19,8 @@ const ManageData = () => {
         handleSubmit,
         handleInput,
         handleDelete,
-        handleEdit
+        handleEdit,
+        handleText
     } = handleFunction
 
     useEffect(() => {
@@ -89,7 +90,7 @@ const ManageData = () => {
                 {res.category}
             </Table.Cell>
             <Table.Cell>
-                {res.description}
+                {handleText(res.description)}
             </Table.Cell>
             <Table.Cell>
                 {res.price}

@@ -53,7 +53,7 @@ const Home = () => {
                     {res.description}
                 </p>
                 <div className=" item-center mt-2 text-gray-500">
-                    <span>{handleText(res.category)},</span>
+                    <span>{handleText(res.category)}</span>
                     <span>{formatBytes(res.size)}</span>
                     <span>, {handleAndroid(res.is_android_app)} &amp; {handleIos(res.is_ios_app)}</span>
                 </div>
@@ -67,8 +67,8 @@ const Home = () => {
                 </div>
                 </div>
             </div>
-                                )
-                            })}
+                    )
+                })}
             {/* Batas akhir Card section */}
             </div>
         </section>
