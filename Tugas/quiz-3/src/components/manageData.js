@@ -41,7 +41,7 @@ const ManageData = () => {
         <div className="bg-white w-4/5 mx-auto text-left bg-white rounded-2xl mb-20 mt-20 ">
             <h1 className="mb-10 text-2xl"> Manage Data</h1>
         <Table >
-        <Table.Head className="text-xs bg-purple-500 text-white">
+        <Table.Head className="text-xs bg-purple-500 text-black">
             <Table.HeadCell>
             NO
             </Table.HeadCell>

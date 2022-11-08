@@ -142,7 +142,7 @@ export const GlobalProvider = (props) => {
         if(type = 1) {
             return "Android"
         } else if (type = 0) {
-            return null
+            return "IOS"
         } else {
             return null
         }
@@ -151,7 +151,7 @@ export const GlobalProvider = (props) => {
         if(type == 1) {
             return "IOS"
         } else if (type = 0) {
-            return null
+            return "Android"
         } else {
             return null
         }
@@ -198,6 +198,7 @@ export const GlobalProvider = (props) => {
         }
         return str.slice(num, 15) + '...'
       }
+
 
 
     let state = {
