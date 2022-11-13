@@ -70,17 +70,22 @@ return(
                           <p className="text-gray-400 font-normal text-sm">
                             {handleText(res.job_description ,100)}
                           </p>
-                          <div className="flex items-center rounded justify-between p-2 bg-teal-100 my-6">
-                            <div className="flex items-start w-full justify-between">
-                              <p className="flex-grow w-full text-xl text-gray-700">            
-                                    {convertToRupiah(res.salary_min + "")}
-                              </p>
-                              <span className="px-3 py-1 flex-none text-sm rounded-full text-teal-400 border border-teal-500">
+                            <div className="flex mx-auto mt-4 ">
+                              <span className="px-3 mx-auto py-1 flex-none text-sm rounded-full text-teal-400 border border-teal-500">
                                 {res.job_tenure}
                               </span>
-                              <span className="px-3 py-1 flex-none text-sm rounded-full text-teal-400 border border-teal-500">
+                              <span className="px-3 mx-auto py-1 flex-none text-sm rounded-full text-teal-400 border border-teal-500">
                                 {res.job_type}
                               </span>
+                            </div>
+                          <div className="flex items-center rounded justify-between p-2 bg-teal-100 my-4">
+                            <div className="flex items-start w-full justify-between">
+                              <p className="flex-grow w-full text-xl text-gray-700">  
+                              <span class="text-gray-400 font-light text-md mr-2">
+                                IDR 
+                            </span>          
+                                    {convertToRupiah(res.salary_min + "")} - {convertToRupiah(res.salary_max + "")}
+                              </p>
                             </div>
                           </div>
                         </Link>

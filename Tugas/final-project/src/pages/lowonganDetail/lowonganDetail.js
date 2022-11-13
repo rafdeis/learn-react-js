@@ -82,6 +82,8 @@ const LowonganDetail = () => {
             </p>            
             </div>
 
+            <p className="mb-3 font-normal text-gray-400 text-xl dark:text-gray-400">{dataJob?.created_at}</p>
+
 
             <div className="flex-none hidden md:block mt-10">
             <span className="text-xl w-full px-10 py-4 text-sm rounded-xl text-white bg-teal-300">

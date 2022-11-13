@@ -9,6 +9,7 @@ export const AuthContext = createContext()
 export const AuthProvider = (props) => {
 
     let navigate = useNavigate()
+    const [fetchStatus,setFetchStatus] = useState(true)
 
     const [dataUser, setDataUser] = useState(JSON.parse(Cookies.get('user')?? null))
     console.log(dataUser)
@@ -88,8 +89,16 @@ export const AuthProvider = (props) => {
         })
         .then((res) => {
             console.log(res)
+            setFetchStatus(true)
             navigate('/dashboard/profile')
         })
+        setInput(
+            {
+            current_password : "",
+            new_password : "",
+            new_confirm_password : ""
+            }
+        )
     }
     
 
