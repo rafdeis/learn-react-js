@@ -15,6 +15,7 @@ export const DashboardProvider = (props) =>{
     const [ currentId, setCurrentId ] = useState(-1)
     const [ display,setDisplay ] = useState(false)
     const [ search,setSearch ] = useState("")
+    const [dataJob,setDataJob] = useState(null)
 
     const [ filter,setFilter ] = useState({
         company_city : "",
@@ -232,7 +233,8 @@ export const DashboardProvider = (props) =>{
         currentId, setCurrentId,
         display,setDisplay,
         search,setSearch,
-        filter,setFilter
+        filter,setFilter,
+        dataJob,setDataJob
 
     }
     let handleFunction = {

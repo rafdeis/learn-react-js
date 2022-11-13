@@ -40,9 +40,9 @@ return(
     
         <FilterSearch/>
 
-    <div className="flex flex-wrap gap-5 justify-start items-start my-10">
-            { data !== null && data.map((res) => { 
-                return (
+                <div  className="flex flex-wrap gap-5 justify-start items-start my-10">
+                    { data !== null && data.map((res) => { 
+                        return (
                         <Link to={`/lowongan/${res.id}`} key={res.id} className="shadow-lg transform transition duration-500 hover:scale-90 border-2 rounded-xl w-full lg:max-w-xs p-6 bg-white dark:bg-gray-800 overflow-hidden">
                           <div className="flex flex-col md:flex-row items-center justify-between">
                             <div className="flex items-center justify-start w-full flex-grow">  

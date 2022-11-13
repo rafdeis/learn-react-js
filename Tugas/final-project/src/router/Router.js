@@ -33,7 +33,7 @@ const Router = () => {
                         <Lowongan />
                     </LayoutBeranda>
                 } />
-                <Route path='/lowongan/:IdData' element={
+                <Route path='/lowongan/:ID_GAMES' element={
                     <LayoutBeranda>
                         <LowonganDetail />
                     </LayoutBeranda>
