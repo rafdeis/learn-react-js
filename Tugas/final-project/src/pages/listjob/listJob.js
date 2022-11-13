@@ -51,7 +51,7 @@ const ListJob = () => {
             DESCRIPTION
             </Table.HeadCell>
             <Table.HeadCell>
-            QALITY
+            QALIFICAT
             </Table.HeadCell>
             <Table.HeadCell>
             TYPE

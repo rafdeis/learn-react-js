@@ -61,7 +61,7 @@ const FilterSearch = () => {
                             </div>
                             <div className="mb-4">
                                 <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tenure</label>
-                                <input onChange={handleChangeFilter} value={filter.job_tenure} type="text" name="job_tenure" className="block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-teal-300 focus:border-teal-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-300 dark:focus:border-teal-300" required />
+                                <input onChange={handleChangeFilter} value={filter.job_tenure} type="text" name="job_tenure" className="block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-xs focus:ring-teal-300 focus:border-teal-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-300 dark:focus:border-teal-300" required/>
                             </div>
                             <div className="mb-4">
                                 <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Type</label>
@@ -74,6 +74,7 @@ const FilterSearch = () => {
                             </button>
 
                             </form>
+                            
                     </Accordion.Content>
                 </Accordion.Panel>
                 </Accordion>
