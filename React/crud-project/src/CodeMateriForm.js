@@ -10,7 +10,7 @@ import { useParams } from 'react-router-dom';
 
     const { state, handleFunction } = useContext(GlobalContext)
     const {
-        data , setData,
+        data , setData, 
         input, setInput,
         fetchStatus, setFetchStatus,
         currentId, setCurrentId
